@@ -5,6 +5,7 @@ const Post = () => {
     <div className={s.item}>
       <img src="" alt="" />
       <div>
+        <p>Hi</p>
         <span>like</span>
       </div>
     </div>

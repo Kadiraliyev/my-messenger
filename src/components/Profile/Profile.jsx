@@ -8,7 +8,9 @@ function Profile() {
       <div className={s.contentImg}>
         <img src={developPng} alt="" width={"100%"} height={"100%"} />
       </div>
-      <Posts />
+      <div className={s.posts}>
+        <Posts />
+      </div>
     </div>
   );
 }

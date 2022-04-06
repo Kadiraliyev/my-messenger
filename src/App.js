@@ -5,7 +5,7 @@ import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
 
-function App() {
+function App(props) {
   return (
     <BrowserRouter>
       <div className="app_wrapper">
@@ -13,7 +13,10 @@ function App() {
         <Navbar />
         <div className="app_wrapper_content">
           <Routes>
-            <Route path="/dialogs" element={<Dialogs />} />
+            <Route
+              path="/dialogs/*"
+              element={<Dialogs state={props.state.messagePage} />}
+            />
             <Route path="/profile" element={<Profile />} />
           </Routes>
         </div>
