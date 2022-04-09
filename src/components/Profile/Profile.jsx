@@ -1,15 +1,18 @@
+import MyPosts from "./MyPosts/MyPosts";
 import s from "./Profile.module.css";
-import developPng from "../../img/developer.png";
-import Posts from "./Posts/Posts";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-function Profile() {
+function Profile(props) {
   return (
     <div className={s.content}>
-      <div className={s.contentImg}>
-        <img src={developPng} alt="" width={"100%"} height={"100%"} />
-      </div>
+      <ProfileInfo />
       <div className={s.posts}>
-        <Posts />
+        <MyPosts
+          posts={props.state.posts}
+          addNewPost={props.addNewPost}
+          newPostText={props.state.newPostText}
+          updateNewPostText={props.updateNewPostText}
+        />
       </div>
     </div>
   );
