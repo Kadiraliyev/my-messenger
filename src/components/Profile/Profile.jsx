@@ -9,9 +9,8 @@ function Profile(props) {
       <div className={s.posts}>
         <MyPosts
           posts={props.state.posts}
-          addNewPost={props.addNewPost}
           newPostText={props.state.newPostText}
-          updateNewPostText={props.updateNewPostText}
+          dispatch={props.dispatch}
         />
       </div>
     </div>
