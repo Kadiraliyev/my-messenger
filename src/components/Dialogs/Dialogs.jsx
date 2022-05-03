@@ -1,10 +1,9 @@
 import DialogItem from "./DialogItem/DialogItem";
 import s from "./Dialogs.module.css";
 import Message from "./Message/Message";
-import {sendMessageCreator, updateNewMessageBodyCreator} from "../../redux/dialogs-reducer";
 
 const Dialogs = (props) => {
-  let state = props.dialogPage;
+  let state = props.dialogsPage;
 
   let messageElement = state.messages.map(el => <Message key={el.id} id={el.id} message={el.message} />)
   let dialogsElement = state.dialogs.map((el) => {
