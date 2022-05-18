@@ -1,11 +1,11 @@
-import s from "./Profile.module.css";
-import ProfileInfo from "./ProfileInfo/ProfileInfo";
-import MyPostsContainer from "./MyPosts/MyPostsContainer";
+import s from './Profile.module.css';
+import ProfileInfo from './ProfileInfo/ProfileInfo';
+import MyPostsContainer from './MyPosts/MyPostsContainer';
 
 function Profile(props) {
   return (
     <div className={s.content}>
-      <ProfileInfo />
+      <ProfileInfo profile={props.profile} />
       <div className={s.posts}>
         <MyPostsContainer />
       </div>
